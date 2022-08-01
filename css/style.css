@@ -54,8 +54,12 @@ h1{text-align: center; color: #086972;}
 
 .boton_comprar:hover{color: rgb(0, 0, 0); font-size: 17px; border-style: none;}
 
-.card{ box-shadow: 0 0 15px black; margin: 40px; width: 250px; height: 350px;}
+.card{display:inline-block ; box-shadow: 0 0 15px black; margin: 40px;}
 
 .boton_carrito{width: 100px; height: 30px; margin-right: 0%; background-color: #748DA6; border-radius: 5px; border-style:double; border: #677889; }
 
 .modal-container{display: flex; flex-direction: column; width: 200px; height: 200px;}
+
+.card_contacto{display: inline-block; justify-content: center; align-items: center; flex-direction: column; text-align:justify; width: 500px ; height: 500px; background-color:#c4d1dd; margin-left: 35%; padding: 20px; border-style:dashed; color: #677889; border-color: rgb(237, 237, 15);}
+
+.carrito{display: block; justify-content: center; align-items: center; flex-direction: column; text-align:justify; width: 500px; height: 300px; margin-left: 35%; background-color: #BAE5E5; color:#677889; padding: 20px; box-shadow: 0 0 15px black;}

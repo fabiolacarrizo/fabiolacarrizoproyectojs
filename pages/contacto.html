@@ -13,12 +13,39 @@
         <a href="../index.html"><img class="logo" src="../images/BBSunshine (3).png" alt=""> </a>
         <nav> <a href="../index.html">INICIO |</a> <a href="../pages/productos.html">PRODUCTOS |</a> <a href="../pages/quienessomos.html">QUIENES SOMOS |</a> <a href="../pages/contacto.html">CONTACTO</a></nav>
     </header>
-      
    <main>
-   
-   
-   </main>
+   <h1>Contacto</h1>
 
+
+
+   <div class="card_contacto">
+   <form action="" method="post">
+   <p> <label for="">Nombre y Apellido</label>
+    <input type="text"></p> 
+
+    <p> <label for="">Correo Electronico</label>
+    <input type="email"> </p>
+
+   <p> <label for="">Numero de telefono</label>
+    <input type="number"></p>
+
+    <label for="sexo">Sexo</label>
+    <p> <input type="radio" name="sexo"> Hombre
+   <input type="radio" name="sexo"> Mujer
+   <input type="radio" name="sexo"> Otro </p>
+
+    <textarea name="Comentarios" placeholder="Escriba su consulta" id="" cols="60" rows="8"></textarea>
+     
+
+
+    <p> <input type="button"class="boton_comprar" id="enviar_pregunta" value="Enviar" >
+    <input class="boton_comprar" type="reset" value="Eliminar"></p> 
+   </form>
+   </div>
+
+    <p id="contado" class="card_mensajeenviado">  </p>
+
+   </main>
    <footer>
        <ul class="card_piedatos">
            <li><a href="../index.html">Inicio</a> </li>
@@ -32,7 +59,8 @@
            <li><img src="../images/iconocorreo.jpg" alt="">Correo</li>
          </ul>
    </footer>
-<script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/index.js"></script>    
+   
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/formulario.js"></script> 
 </body>
 </html>
