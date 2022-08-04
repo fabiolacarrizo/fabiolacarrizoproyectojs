@@ -11,30 +11,37 @@
 <body>
  <header>
      <a href="../index.html"><img class="logo" src="../images/BBSunshine (3).png" alt=""> </a>
-     <nav> <a href="../index.html">INICIO |</a> <a href="../pages/productos.html">PRODUCTOS |</a> <a href="../pages/quienessomos.html">QUIENES SOMOS |</a> <a href="../pages/contacto.html">CONTACTO</a> <button class="boton_carrito" id="open">CARRITO</button>  </nav>
-   
+     <nav> <a href="../index.html">INICIO |</a> <a href="../pages/productos.html">PRODUCTOS |</a> <a href="../pages/quienessomos.html">QUIENES SOMOS |</a> <a href="../pages/contacto.html">CONTACTO</a>
+       <button class="boton_carrito" id="open">CARRITO</button>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>  </nav>
+    
  </header>
-<main id="producto_contenedor">
- 
-
+<main id="contenedor-productos">
+  
   <h1 >Productos</h1>
 
-  
+</main>
 
-
-
-
-<div  class="contenedorCarrito">
-  <h2>Carrito:</h2>
-<p>Articulo:  </p>
-<p>Precio:    </p>
-<p>Cantidad:  </p>
-<p>Total:     </p>
-<input class="boton_comprar" type="button" value="Comprar">
-<div id="carrito-contenedor"></div>
+<div class="card_carrito">
+  <div >
+      <h3>Carrito</h3>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+           <div class="productoEnCarrito">
+              <p> </p>
+              <p> </p>
+              <p>  </p>
+              <button class="boton-eliminar"><i class="fas fa-trash-alt">Eliminar</i></button>
+          </div>
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+  </div>
 </div>
 
-</main>
+
+
+
 <footer>
     <ul class="card_piedatos">
         <li><a href="../index.html">Inicio</a> </li>
@@ -49,10 +56,8 @@
       </ul>
 </footer>
 
-
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/app.js" type="module"></script>
-<script src="../js/carrito.js" type="module"></script>
-<script src="../js/index.js" type="module"></script>    
+<script src="../js/stock.js" type="module"></script>    
 </body>
 </html>
