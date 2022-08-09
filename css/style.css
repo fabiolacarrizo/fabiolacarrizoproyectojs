@@ -22,7 +22,11 @@ li img{border-radius: 5px;}
 
 .card_piedatos{display:flex;flex-direction: row; justify-content: center;}
 
-.card__inicio{display: block; align-items: center;  margin-top: 40px; margin-left: 150px; margin-right: 200px; background-color: #e7fdf1; height: 750px; border-radius:  0px; ; box-shadow: 0 0 15px black;}
+.card_piedatos li a:hover{font-size: 15px; text-decoration: underline;}
+
+.card_piedatos img:hover{ width: 25px; height: 25px;}
+
+.card__inicio{display: block; align-items: center;  margin-top: 40px; margin-left: 150px; margin-right: 200px; margin-bottom: 100px; background-color: #e7fdf1; height: 750px; border-radius:  0px; ; box-shadow: 0 0 15px black;}
 
 .card__imagencarrusel{width: 100%; height: 550px;}
 
@@ -56,7 +60,9 @@ h1{text-align: center; color: #086972;}
 
 .card{display:inline-block ; box-shadow: 0 0 15px black; margin: 40px;}
 
-.boton_carrito{width: 100px; height: 30px; margin-right: 0%; background-color: #748DA6; border-radius: 5px; border-style:double; border: #677889; }
+.boton_carrito{width: 100px; height: 30px; margin-right: 0%; background-color: #748DA6; border-radius: 5px; border-style:double; border: #677889; color: #086972; font-size: 18px;  }
+
+.boton_carrito:hover{font-size: 20px; color: #413F42;}
 
 .modal-container{display: flex; flex-direction: column; width: 200px; height: 200px;}
 
@@ -78,25 +84,6 @@ h1{text-align: center; color: #086972;}
 
 
 
-
-#boton-carrito {
-    border: none;
-    color: royalblue;
-    font-size: 40px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px 20px;
-    transition: all .3s;
-}
-#boton-carrito:hover {
-    cursor: pointer;
-    color: white;
-    background-color: royalblue;
-}
-#boton-carrito:focus {
-    outline: none;
-}
-
 #contenedor-productos {
     max-width: 1200px;
     margin: 60px auto;
@@ -113,15 +100,18 @@ p {
     font-weight: 700;
 }
 .boton-agregar {
-    background-color: royalblue;
-    color: white;
+    background-color:#9CB4CC;
+    color:#086972;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 5px;
-    border: none;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 5px;
 }
+
 .boton-agregar:hover {
-    cursor: pointer;
+    cursor: pointer; border: none; font-size: 20px;
 }
 .boton-agregar:focus {
     outline: none;

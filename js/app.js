@@ -45,6 +45,13 @@ const boton = document.getElementById(`botonAgregar${producto.id}`)
 
 boton.addEventListener('click' , () => {    
     agregarAlCarrito(producto.id)
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: `Haz agregado ${producto.nombre}. Color: ${producto.color}, con un valor de $${producto.precio} al carrito `,
+        showConfirmButton: false,
+        timer: 1500
+      })
 })
 
 })
@@ -88,3 +95,4 @@ const actualizarCarrito = () => {
 
    
 }
+

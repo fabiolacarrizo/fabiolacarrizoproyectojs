@@ -20,14 +20,14 @@
 
    <div class="card_contacto">
    <form action="" method="post">
-   <p> <label for="">Nombre y Apellido</label>
-    <input type="text"></p> 
+   <p> <label for="nombre">Nombre y Apellido</label>
+    <input name="nombre" type="text"></p> 
 
-    <p> <label for="">Correo Electronico</label>
-    <input type="email"> </p>
+    <p> <label for="correo">Correo Electronico</label>
+    <input name="correo" type="email"> </p>
 
-   <p> <label for="">Numero de telefono</label>
-    <input type="number"></p>
+   <p> <label for="numerotelefonico">Numero de telefono</label>
+    <input name="numerotelefonico" type="number"></p>
 
     <label for="sexo">Sexo</label>
     <p> <input type="radio" name="sexo"> Hombre
@@ -38,12 +38,11 @@
      
 
 
-    <p> <input type="button"class="boton_comprar" id="enviar_pregunta" value="Enviar" >
+    <p> <input type="button" class="boton_comprar" id="enviar_pregunta"value="Enviar" >
     <input class="boton_comprar" type="reset" value="Eliminar"></p> 
    </form>
    </div>
 
-    <p id="contado" class="card_mensajeenviado">  </p>
 
    </main>
    <footer>
@@ -61,6 +60,8 @@
    </footer>
    
 <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/alertas.js"></script>
 <script src="../js/formulario.js"></script> 
 </body>
 </html>

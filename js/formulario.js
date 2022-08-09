@@ -1,11 +1,14 @@
-  const mensajeEnviado= document.getElementById('contado');
-const botonConsulta= document.getElementById('enviar_pregunta');
 
+const consultaEnviadaAlerta = document.getElementById("enviar_pregunta") 
+consultaEnviadaAlerta.addEventListener('click' , () => {
 
-let contador= "Su consulta Fue enviada con exito";
+  Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Su Consulta Fue Enviada',
+    showConfirmButton: false,
+    timer: 1500
+  })
 
-botonConsulta.addEventListener('click', () => {
-    console.log("click");
-    mensajeEnviado.textContent= contador;
-});
+})
 
