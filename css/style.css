@@ -60,7 +60,7 @@ h1{text-align: center; color: #086972;}
 
 .card{display:inline-block ; box-shadow: 0 0 15px black; margin: 40px;}
 
-.boton_carrito{width: 100px; height: 30px; margin-right: 0%; background-color: #748DA6; border-radius: 5px; border-style:double; border: #677889; color: #086972; font-size: 18px;  }
+.boton_carrito{width: 80px; height: 30px; margin-right: 0%; background-color: #9CB4CC; border-radius: 5px; border-style:double; border: #677889; color: #086972; font-size: 18px;  }
 
 .boton_carrito:hover{font-size: 20px; color: #413F42;}
 
@@ -98,6 +98,7 @@ p {
 
 .precioProducto {
     font-weight: 700;
+    margin-left: 20px; 
 }
 .boton-agregar {
     background-color:#9CB4CC;
@@ -203,3 +204,8 @@ p {
 
 .card_carrito{width:600px ; height:600px
      ; display: block; background-color: #c4d1dd; overflow: scroll; margin-left: 30%;}
+
+     button img{width: 35px; height: 27px; border-radius: 5px;}
+
+#cardQuienesSomos li{display: flex; flex-direction: column; background-color: #748DA6; border-radius: 20px; margin: 20px;  align-items: center; }
+

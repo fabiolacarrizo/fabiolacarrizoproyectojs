@@ -48,7 +48,7 @@ boton.addEventListener('click' , () => {
     Swal.fire({
         position: 'top-center',
         icon: 'success',
-        title: `Haz agregado ${producto.nombre}. Color: ${producto.color}, con un valor de $${producto.precio} al carrito `,
+        title: `Haz agregado al carrito  un ${producto.nombre}. Color: ${producto.color}, con un valor de $${producto.precio} `,
         showConfirmButton: false,
         timer: 1500
       })
@@ -75,14 +75,16 @@ const eliminarDelCarrito = (prodId) => {
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML= " "
 
+
+    
     carrito.forEach((prod) => {
         const div = document.createElement("div")
         div.className = ('productoEnCarrito')
         div.innerHTML = `
         <p>${prod.nombre}</p>
         <p>Precio:$${prod.precio}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad} </span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})"class="boton-eliminar"><i></i></button>
         `
         contenedorCarrito.appendChild(div)
 
@@ -91,6 +93,7 @@ const actualizarCarrito = () => {
     })
 
     contadorCarrito.innerText = carrito.length
+    contadorDosCarrito.innerText= carrito.length
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
 
    

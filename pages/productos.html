@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>BBSunshine | Productos</title>
 </head>
 <body>
  <header>
      <a href="../index.html"><img class="logo" src="../images/BBSunshine (3).png" alt=""> </a>
      <nav> <a href="../index.html">INICIO |</a> <a href="../pages/productos.html">PRODUCTOS |</a> <a href="../pages/quienessomos.html">QUIENES SOMOS |</a> <a href="../pages/contacto.html">CONTACTO</a>
-    <button class="boton_carrito" id="boton-carrito" > Carrito <span id="contadorCarrito">0</span> </button> </nav>
+    <button class="boton_carrito" id="boton-carrito" > <img src="../images/iconocarrito.png" alt=""> <span id="contadorCarrito">0</span> </button> </nav>
     
  </header>
 <main >
@@ -29,17 +29,14 @@
 <div class="card_carrito">
   <div >
       <h3>Carrito</h3>
-      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
       <div id="carrito-contenedor">
-           <div class="productoEnCarrito">
-              <p> </p>
-              <p> </p>
-              <p>  </p>
-              <button class="boton-eliminar"><i class="fas fa-trash-alt">Eliminar</i></button>
-          </div>
+            <div class="productoEnCarrito">
+          
+          </div> 
       </div>
-      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span>  Articulos: <span id="contadorDosCarrito"></span></p>
       <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+     
   </div>
 </div>
 

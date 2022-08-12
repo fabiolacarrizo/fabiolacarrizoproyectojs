@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>BBSunshine | Contacto</title>
 </head>
 <body>
     <header>
@@ -19,28 +19,35 @@
 
 
    <div class="card_contacto">
-   <form action="" method="post">
+   <form action="" method="post" id="form">
    <p> <label for="nombre">Nombre y Apellido</label>
-    <input name="nombre" type="text"></p> 
+    <input name="nombre" type="text" placeholder="Nombre" required></p> 
 
     <p> <label for="correo">Correo Electronico</label>
-    <input name="correo" type="email"> </p>
+    <input name="correo" type="email" placeholder="Email" required> </p>
 
    <p> <label for="numerotelefonico">Numero de telefono</label>
-    <input name="numerotelefonico" type="number"></p>
+    <input name="numerotelefonico" type="number" placeholder="Numero de Telefonoo" required></p>
 
     <label for="sexo">Sexo</label>
     <p> <input type="radio" name="sexo"> Hombre
    <input type="radio" name="sexo"> Mujer
    <input type="radio" name="sexo"> Otro </p>
 
-    <textarea name="Comentarios" placeholder="Escriba su consulta" id="" cols="60" rows="8"></textarea>
+    <textarea name="comentarios" placeholder="Escriba su consulta" id="" cols="60" rows="8" required></textarea>
      
-
-
-    <p> <input type="button" class="boton_comprar" id="enviar_pregunta"value="Enviar" >
+    <p> <input type="submit" class="boton_comprar" id="button" value="Enviar" >
     <input class="boton_comprar" type="reset" value="Eliminar"></p> 
+
    </form>
+
+   <script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ 
+ <script type="text/javascript">
+   emailjs.init('NyOid4tgDYNUOUW7Z')
+ </script>
+
    </div>
 
 
