@@ -8,7 +8,42 @@ const contenedorCarrito = document.getElementById('carrito-contenedor')
 const botonVaciar = document.getElementById("vaciar-carrito")
 
 const precioTotal= document.getElementById('precioTotal')
-let carrito = []
+
+const precioTotalDos= precioTotal;
+
+
+
+//constante para el boton de finalizar compra
+const finalizarCompra =document.getElementById('finalizar-compra')
+
+
+let carrito = [] //no borrar carrito
+
+//la opcion de finalizar compra sale un alerta al hacer click, borrar la alert y hacer un modal
+finalizarCompra.addEventListener('click' , () =>{carrito.length = 0
+    actualizarCarrito(),
+    Swal.fire({
+        title: 'Confirmas la compra?' ,
+        text: ``,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, quiero comprar!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Compra Realizada!',
+            'Tu compra fue procesada con exito.',
+            'success'
+          )
+        }
+      })
+
+}
+)
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
@@ -64,6 +99,7 @@ const agregarAlCarrito = (prodId) => {
 } 
 
 
+
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
     const indice = carrito.indexOf(item)
@@ -71,11 +107,8 @@ const eliminarDelCarrito = (prodId) => {
     actualizarCarrito()
 }  
 
-
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML= " "
-
-
     
     carrito.forEach((prod) => {
         const div = document.createElement("div")
@@ -84,7 +117,6 @@ const actualizarCarrito = () => {
         <p>${prod.nombre}</p>
         <p>Precio:$${prod.precio}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad} </span></p>
-        <button onclick="eliminarDelCarrito(${prod.id})"class="boton-eliminar"><i></i></button>
         `
         contenedorCarrito.appendChild(div)
 
@@ -95,7 +127,7 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length
     contadorDosCarrito.innerText= carrito.length
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
-
+    precioTotalDos.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
    
 }
 
